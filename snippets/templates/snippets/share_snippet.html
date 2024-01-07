@@ -1,0 +1,16 @@
+<!-- templates/snippets/share_snippet.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Snippet</title>
+</head>
+<body>
+    <h1>Snippet Shared Successfully</h1>
+    <p>Share this link with others:</p>
+    <input type="text" value="{{ shared_link }}" readonly>
+    <p>This link will expire in 7 days.</p>
+    <a href="{% url 'snippet_list' %}">Back to Snippet List</a>
+</body>
+</html>

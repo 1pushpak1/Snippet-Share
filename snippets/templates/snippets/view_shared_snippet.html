@@ -1,0 +1,20 @@
+<!-- templates/snippets/view_shared_snippet.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Shared Snippet</title>
+</head>
+<body>
+    <h1>Shared Code Snippet</h1>
+    
+    <div>
+        <strong>{{ snippet.title }}</strong>
+        <p>{{ snippet.code }}</p>
+        <small>Created at: {{ snippet.created_at }}</small>
+    </div>
+
+    <a href="{% url 'snippet_list' %}">Back to Snippet List</a>
+</body>
+</html>

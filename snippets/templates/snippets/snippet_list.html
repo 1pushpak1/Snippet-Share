@@ -1,0 +1,33 @@
+<!-- templates/snippets/snippet_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet List</title>
+</head>
+<body>
+    <h1>Code Snippet List</h1>
+    
+    {% if snippets %}
+        <ul>
+            {% for snippet in snippets %}
+                <li>
+                    <strong>{{ snippet.title }}</strong>
+                    <p>{{ snippet.code }}</p>
+                    <small>Created at: {{ snippet.created_at }}</small>
+                    <a href="{% url 'share_snippet' snippet.id %}">Share</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No snippets available.</p>
+    {% endif %}
+
+    <a href="{% url 'create_snippet' %}">Create a new snippet</a>
+
+    {% for snippet in snippets %}
+   
+{% endfor %}
+</body>
+</html>
